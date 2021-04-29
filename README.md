@@ -1,5 +1,5 @@
 # Motivation
-Motivation is a mobile app that shows motivational phrases by according
+Motivation is a mobile app that shows motivational phrases according to
 the selected category.
 
 ## Features
