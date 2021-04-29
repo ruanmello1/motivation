@@ -24,10 +24,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             supportActionBar!!.hide()
         }
 
+
 //        instancia
         mSecurityPreferences = SecurityPreferences(this)
         val name = mSecurityPreferences.getString(MotivationConstants.KEY.PERSON_NAME)
-        textName.text = "Olá, $name!"
+        var idioma = resources.getText(R.string.salvar)
+        if (idioma == "SALVAR"){
+            textName.text = "Olá, $name!"}
+        else {
+            textName.text = "Hello, $name!"
+        }
 
 //        lógica inicial de seleção
         imageAll.setColorFilter(resources.getColor(R.color.colorAccent))
@@ -52,9 +58,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+
+
     private fun handleNewPhrase() {
-        val phrase = Mock().getPhrase(mPhraseFilter)
-        textPhrase.text = phrase
+        var idioma = resources.getText(R.string.salvar)
+        if (idioma == "SALVAR") {
+            val phrase = Mock().getPhrase(mPhraseFilter)
+            textPhrase.text = phrase
+        }
+        else{
+            val phrase = Mock().getPhrase1(mPhraseFilter)
+            textPhrase.text = phrase
+        }
 
     }
 

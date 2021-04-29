@@ -34,6 +34,10 @@ class SplashActivity : AppCompatActivity(), View.OnClickListener {
     }
 
 
+
+
+
+
     override fun onClick(view: View) {
         val id = view.id
         if (id == R.id.buttonSave)
